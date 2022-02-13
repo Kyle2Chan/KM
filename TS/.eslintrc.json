@@ -1,0 +1,19 @@
+{
+	"extends": ["eslint:recommended", "prettier"],
+	"plugins": ["prettier"],
+	"rules": {
+		"prettier/prettier": "error"
+	},
+	"overrides": [
+		{
+			"files": ["**/*.ts", "**/*.tsx"],
+			"excludedFiles": ["**/*.d.ts"],
+			"parser": "@typescript-eslint/parser",
+			"extends": ["plugin:@typescript-eslint/recommended"],
+			"rules": {
+				"@typescript-eslint/no-empty-function": "off",
+				"@typescript-eslint/ban-types": "warn"
+			}
+		}
+	]
+}
